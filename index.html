@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Google Map API</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByoslcu4eWewHVNMJzIOxRcUMDYRAkVNE&sensor=true&libraries=places"></script>
+
+    <script src="myLoc.js"></script>
+
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+
+
+  </head>
+  
+  <body class="w3-margin">
+
+<!--   <script>
+
+    var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=43.670243,-79.38896&radius=1500&type=lodging&key=AIzaSyByoslcu4eWewHVNMJzIOxRcUMDYRAkVNE";
+
+    $.ajax({
+      url: proxyUrlJsonp(queryUrl),
+      method: "GET",
+      dataType:'jsonp'
+    }).then(function(response) {
+      // var lodgingDiv = $("#lodgingDiv");
+      // var lodging = response.results;
+
+      // for (var i=0; i<lodging.length; i++) {
+      //   var lodgingName = lodging[i].name; 
+      //   lodgingDiv.append(lodgingName);
+      // }
+      console.log(response.results.name)
+
+    });
+  </script> -->
+
+
+    <div class="w3-panel w3-blue-grey">
+        <h1 class="w3-text-orange" style="text-shadow:1px 1px 0 #444">Google Map Lodging</h1>
+    </div>
+
+
+    <form id="lodgingForm" class="w3-container w3-card-4 w3-quarter w3-padding-16">
+          <label for="lodgingInput" class="w3-padding-16">Location</label>         
+        <input class="w3-input w3-hover-pale-yellow" type="text" id="address" placeholder="click here to get geolocation">
+<!--         <button class="btn" type="submit">Submit</button>
+ -->    </form>
+ 
+    <div id="location">
+      Your location will go here.
+    </div>
+    <div id="map-canvas">
+      Google Map will go here!.
+    </div>
+
+
+  </body>
+</html>
